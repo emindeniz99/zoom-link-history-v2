@@ -1,3 +1,27 @@
+There are all meeting links that you have visited on zoom.us domain.
+
+- When you close meeting, and you can find link with one click.
+- You can store recurring meetings link
+
+What is new? ( v2 version )
+- you can search
+- auto close postattendee tabs
+- rename your links
+- your links will be ordered accoring to weekdays that you accessed
+
+App data is on your browser storage of chrome ( If you opened sync between chrome browsers, your links are available on your browsers ). There is no access for anyone except you.
+
+Source code is available on Github
+https://github.com/emindeniz99/zoom-link-history-v2
+Feel free to contribute, thanks
+
+https://chrome.google.com/webstore/detail/zoom-history/adnaoifbjdnbkdppmogfhpiahkfnddgg     
+
+
+
+
+template readme:     
+
 <h1 align="center">🚀 web-extension-starter</h1>
 <p align="center">Web Extension starter to build "Write Once Run on Any Browser" extension</p>
 <div align="center">

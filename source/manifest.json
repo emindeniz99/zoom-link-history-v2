@@ -1,75 +1,150 @@
 {
-  "manifest_version": 2,
-  "name": "Sample WebExtension",
-  "version": "0.0.0",
+	"manifest_version": 2,
+	"name": "Zoom History",
+	"version": "0.2.1",
 
-  "icons": {
-    "16": "assets/icons/favicon-16.png",
-    "32": "assets/icons/favicon-32.png",
-    "48": "assets/icons/favicon-48.png",
-    "128": "assets/icons/favicon-128.png"
-  },
-  "description": "Sample description",
-  "homepage_url": "https://github.com/abhijithvijayan/web-extension-starter",
-  "short_name": "Sample Name",
+	"icons": {
+		"16": "assets/icons/latestzoom.png",
+		"32": "assets/icons/latestzoom.png",
+		"48": "assets/icons/latestzoom.png",
+		"128": "assets/icons/latestzoom.png"
+	},
+	"description": "Find your previous zoom.us meeting links",
+	"homepage_url": "https://github.com/emindeniz99",
+	"short_name": "Zoom History",
 
-  "permissions": [
-    "activeTab",
-    "storage",
-    "http://*/*",
-    "https://*/*"
-  ],
+	"permissions": ["storage"],
 
-  "content_security_policy": "script-src 'self'; object-src 'self'",
+	"content_security_policy": "script-src 'self'; object-src 'self'",
 
-  "__chrome|firefox__author": "abhijithvijayan",
-  "__opera__developer": {
-    "name": "abhijithvijayan"
-  },
+	"__chrome|firefox__author": "emindeniz99",
+	"__opera__developer": {
+		"name": "emindeniz99"
+	},
 
-  "__firefox__applications": {
-    "gecko": {
-      "id": "{754FB1AD-CC3B-4856-B6A0-7786F8CA9D17}"
-    }
-  },
+	"__firefox__applications": {
+		"gecko": {
+			"id": "{754FB1AD-CC3B-4856-B6A0-7786F8CA9D17}"
+		}
+	},
 
-  "__chrome__minimum_chrome_version": "49",
-  "__opera__minimum_opera_version": "36",
+	"__chrome__minimum_chrome_version": "49",
+	"__opera__minimum_opera_version": "36",
 
-  "browser_action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "assets/icons/favicon-16.png",
-      "32": "assets/icons/favicon-32.png",
-      "48": "assets/icons/favicon-48.png",
-      "128": "assets/icons/favicon-128.png"
-    },
-    "default_title": "tiny title",
-    "__chrome|opera__chrome_style": false,
-    "__firefox__browser_style": false
-  },
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "assets/icons/latestzoom.png",
+			"32": "assets/icons/latestzoom.png",
+			"48": "assets/icons/latestzoom.png",
+			"128": "assets/icons/latestzoom.png"
+		},
+		"default_title": "Zoom History",
+		"__chrome|opera__chrome_style": false,
+		"__firefox__browser_style": false
+	},
 
-  "__chrome|opera__options_page": "options.html",
-  "options_ui": {
-    "page": "options.html",
-    "open_in_tab": true,
-    "__chrome__chrome_style": false
-  },
+	"__chrome|opera__options_page": "options.html",
+	"options_ui": {
+		"page": "options.html",
+		"open_in_tab": true,
+		"__chrome__chrome_style": false
+	},
 
-  "background": {
-    "scripts": [
-      "js/background.bundle.js"
-    ],
-    "__chrome|opera__persistent": false
-  },
+	"background": {
+		"scripts": ["js/background.bundle.js"],
+		"__chrome|opera__persistent": false
+	},
 
-  "content_scripts": [{
-    "matches": [
-      "http://*/*",
-      "https://*/*"
-    ],
-    "js": [
-      "js/contentScript.bundle.js"
-    ]
-  }]
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.zoom.us/a/*",
+				"*://*.zoom.us/b/*",
+				"*://*.zoom.us/c/*",
+				"*://*.zoom.us/d/*",
+				"*://*.zoom.us/e/*",
+				"*://*.zoom.us/f/*",
+				"*://*.zoom.us/g/*",
+				"*://*.zoom.us/h/*",
+				"*://*.zoom.us/i/*",
+				"*://*.zoom.us/j/*",
+				"*://*.zoom.us/k/*",
+				"*://*.zoom.us/l/*",
+				"*://*.zoom.us/m/*",
+				"*://*.zoom.us/n/*",
+				"*://*.zoom.us/o/*",
+				"*://*.zoom.us/p/*",
+				"*://*.zoom.us/q/*",
+				"*://*.zoom.us/r/*",
+				"*://*.zoom.us/s/*",
+				"*://*.zoom.us/t/*",
+				"*://*.zoom.us/u/*",
+				"*://*.zoom.us/v/*",
+				"*://*.zoom.us/w/*",
+				"*://*.zoom.us/x/*",
+				"*://*.zoom.us/y/*",
+				"*://*.zoom.us/z/*",
+				"*://*.zoom.us/postattendee*",
+				"*://*.zoom.us/wc/leave*",
+				"*://*.zoom.com.cn/a/*",
+				"*://*.zoom.com.cn/b/*",
+				"*://*.zoom.com.cn/c/*",
+				"*://*.zoom.com.cn/d/*",
+				"*://*.zoom.com.cn/e/*",
+				"*://*.zoom.com.cn/f/*",
+				"*://*.zoom.com.cn/g/*",
+				"*://*.zoom.com.cn/h/*",
+				"*://*.zoom.com.cn/i/*",
+				"*://*.zoom.com.cn/j/*",
+				"*://*.zoom.com.cn/k/*",
+				"*://*.zoom.com.cn/l/*",
+				"*://*.zoom.com.cn/m/*",
+				"*://*.zoom.com.cn/n/*",
+				"*://*.zoom.com.cn/o/*",
+				"*://*.zoom.com.cn/p/*",
+				"*://*.zoom.com.cn/q/*",
+				"*://*.zoom.com.cn/r/*",
+				"*://*.zoom.com.cn/s/*",
+				"*://*.zoom.com.cn/t/*",
+				"*://*.zoom.com.cn/u/*",
+				"*://*.zoom.com.cn/v/*",
+				"*://*.zoom.com.cn/w/*",
+				"*://*.zoom.com.cn/x/*",
+				"*://*.zoom.com.cn/y/*",
+				"*://*.zoom.com.cn/z/*",
+				"*://*.zoom.com.cn/postattendee*",
+				"*://*.zoom.com.cn/wc/leave*",
+				"*://*.zoomgov.com/a/*",
+				"*://*.zoomgov.com/b/*",
+				"*://*.zoomgov.com/c/*",
+				"*://*.zoomgov.com/d/*",
+				"*://*.zoomgov.com/e/*",
+				"*://*.zoomgov.com/f/*",
+				"*://*.zoomgov.com/g/*",
+				"*://*.zoomgov.com/h/*",
+				"*://*.zoomgov.com/i/*",
+				"*://*.zoomgov.com/j/*",
+				"*://*.zoomgov.com/k/*",
+				"*://*.zoomgov.com/l/*",
+				"*://*.zoomgov.com/m/*",
+				"*://*.zoomgov.com/n/*",
+				"*://*.zoomgov.com/o/*",
+				"*://*.zoomgov.com/p/*",
+				"*://*.zoomgov.com/q/*",
+				"*://*.zoomgov.com/r/*",
+				"*://*.zoomgov.com/s/*",
+				"*://*.zoomgov.com/t/*",
+				"*://*.zoomgov.com/u/*",
+				"*://*.zoomgov.com/v/*",
+				"*://*.zoomgov.com/w/*",
+				"*://*.zoomgov.com/x/*",
+				"*://*.zoomgov.com/y/*",
+				"*://*.zoomgov.com/z/*",
+				"*://*.zoomgov.com/postattendee*",
+				"*://*.zoomgov.com/wc/leave*"
+			],
+			"js": ["js/contentScript.bundle.js"]
+		}
+	]
 }
